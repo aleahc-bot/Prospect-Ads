@@ -17,6 +17,22 @@ video{max-width:100%}
 @media (max-width:560px){.stats{gap:8px!important}.stat-n{font-size:24px!important}.stat-l{font-size:12.5px!important;line-height:1.3}}
 .stat-l{white-space:nowrap}
 @media (max-width:560px){.svc-h{font-size:28px!important}}
+.ba-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ba-name{font-family:'Archivo',Arial,sans-serif;font-weight:700;font-size:16px;color:#102F4D}
+.ba-tabs{display:inline-flex;background:#EAF0F5;border-radius:999px;padding:4px;gap:2px}
+.ba-tabs button{border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:#4E5868;padding:8px 16px;border-radius:999px;cursor:pointer;min-height:36px}
+.ba-tabs button[aria-pressed="true"]{background:#102F4D;color:#fff}
+.ba-tabs button:focus-visible{outline:2px solid #8CCE06;outline-offset:2px}
+.ba-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ba-grid figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ba-grid figcaption{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#102F4D}
+.ba-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.ba-tag.old{background:#DEE1E6;color:#4E5868}.ba-tag.new{background:#8CCE06;color:#102F4D}
+.ba-frame{height:380px;overflow-y:auto;overflow-x:hidden;border:1px solid #DEE1E6;border-radius:14px;background:#fff;box-shadow:0 12px 28px -18px rgba(16,47,77,.45);overscroll-behavior:contain}
+.ba-frame img{display:block;width:100%;height:auto}
+.ba.mobile .ba-frame{width:min(100%,220px);margin:0 auto;border-radius:22px;border:6px solid #102F4D;height:420px}
+.ba-hint{margin:0;font-size:13px;color:#4E5868}
+@media (max-width:560px){.ba-frame{height:300px}.ba.mobile .ba-frame{height:360px;border-width:4px}}
 </style>
 </head>
 <body>
@@ -88,7 +104,7 @@ video{max-width:100%}
 <div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,250<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month plus ad spend</span></div>
 </div>
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 16px; color: #33415A">We’re competitive about our clients’ results. Our team keeps an ESPN-style scoreboard that tracks the return on investment for every business we work with. We check it daily and compete to push those numbers up, and it shows us where a business may be leaking leads or revenue so we can help fix it.</p>
+<p style="margin: 0; font-size: 16px; color: #33415A">We’re competitive about our clients’ results. Our team keeps an ESPN-style scoreboard that tracks the return on investment for every business we work with.</p>
 </div>
 </div>
 
@@ -107,10 +123,14 @@ video{max-width:100%}
 <div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">From $297<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
 <p style="margin: 0; align-self: flex-start; background: #8CCE06; color: #102F4D; border-radius: 12px; padding: 12px 18px; font-size: 16px"><strong>No upfront fees</strong>, even when we build you a brand-new website.</p>
 </div>
-<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-<div style="aspect-ratio: 4 / 3; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Before: Elite Electricals’ old website]</div>
-<div style="aspect-ratio: 4 / 3; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[After: the Elite Electricals site we built]</div>
-<div style="grid-column: span 2; background: #EAF0F5; border-radius: 16px; padding: 20px 24px; font-size: 16px; color: #33415A"><strong style="color: #102F4D">[Client name]:</strong> from page [#] to the top 3 on Google Maps for “[search term]” in [#] months.</div>
+<div class="ba" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div class="ba-top"><span class="ba-name">Elite Electrical Contractors</span><div class="ba-tabs" role="group" aria-label="Choose view"><button type="button" aria-pressed="true" data-v="desktop">Desktop</button><button type="button" aria-pressed="false" data-v="mobile">Mobile</button></div></div>
+<div class="ba-grid">
+<figure><figcaption><span class="ba-tag old">Before</span>Old website</figcaption><div class="ba-frame"><img data-desktop="img/elite-old-desktop.jpg" data-mobile="img/elite-old-mobile.jpg" src="img/elite-old-desktop.jpg" alt="Elite Electrical’s old website" loading="lazy"></div></figure>
+<figure><figcaption><span class="ba-tag new">After</span>Site we built</figcaption><div class="ba-frame"><img data-desktop="img/elite-new-desktop.jpg" data-mobile="img/elite-new-mobile.jpg" src="img/elite-new-desktop.jpg" alt="The new Elite Electrical website Prospect built" loading="lazy"></div></figure>
+</div>
+<p class="ba-hint">Scroll inside each preview to see the full page.</p>
+<div style="background: #EAF0F5; border-radius: 16px; padding: 20px 24px; font-size: 16px; color: #33415A"><strong style="color: #102F4D">Elite Electrical Contractors:</strong> We replaced their outdated website with a modern, mobile-friendly site that shows upfront pricing and lets customers book an electrician online from any device.</div>
 </div>
 </div>
 
@@ -140,7 +160,7 @@ video{max-width:100%}
 <span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Invoicing</span>
 </div>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #DEE1E6; border-radius: 16px; padding: 24px; font-size: 16px">“[Quote from a VA client about hours saved.]”<div style="margin-top: 10px; font-size: 15px; color: #4E5868">[Name], [Business]</div></div>
+<div style="background: #FFFFFF; border: 1px solid #DEE1E6; border-radius: 16px; padding: 24px; font-size: 16px">“I was able to delegate ordering materials for projects and client communication to make sure that we stayed in contact with the customer and all the materials arrived on time and correctly, so nothing fell through the cracks. This also helped me close more deals because she was able to send out estimates while I was driving.”<div style="margin-top: 10px; font-size: 15px; color: #4E5868">Chester, Landscaping Business</div></div>
 </div>
 </div>
 <div style="padding: 56px 0 0; margin-top: 48px; border-top: 1px solid #DEE1E6">
@@ -165,24 +185,16 @@ video{max-width:100%}
 <h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Client results</h2>
 <p style="margin: 0 0 40px; color: #4E5868; font-size: 19px; max-width: 40em">Real numbers from real accounts, shared with our clients’ permission.</p>
 
-<div style="display: flex; flex-wrap: wrap; gap: 32px; background: #102F4D; color: #FFFFFF; border-radius: 24px; padding: clamp(28px, 4vw, 48px); margin-bottom: 16px; align-items: center">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<span style="font-size: 15px; color: #C9D6E3">Featured case study, [Service]</span>
-<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1">[Client name] went from [starting point] to [result] in [#] months.</h3>
-<p style="margin: 0; color: #C9D6E3">[Two sentences: the problem they came in with, and what we did about it.]</p>
-<div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 8px">
-<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1; color: #8CCE06">[#]</div><div style="font-size: 15px; color: #C9D6E3">[metric]</div></div>
-<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1; color: #8CCE06">[#]</div><div style="font-size: 15px; color: #C9D6E3">[metric]</div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px; background: #102F4D; color: #FFFFFF; border-radius: 24px; padding: clamp(28px, 4vw, 48px); align-items: flex-start">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 15px; color: #C9D6E3">Featured case study, paid ads and website</span>
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 100%; font-weight: 600; font-size: clamp(26px, 3vw, 38px); line-height: 1.15; letter-spacing: -0.02em">Trim Views Carpentry closed $38,500 in new projects in their first two months.</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 40px; margin-top: 4px">
+<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: clamp(32px, 4vw, 44px); line-height: 1.1; color: #8CCE06">$2,375</div><div style="font-size: 15px; color: #C9D6E3">spent on Meta ads</div></div>
+<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: clamp(32px, 4vw, 44px); line-height: 1.1; color: #8CCE06">$38,500</div><div style="font-size: 15px; color: #C9D6E3">in new projects closed</div></div>
 </div>
 </div>
-<div style="flex: 1 1 380px; min-width: 0; aspect-ratio: 16 / 10; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Video: client tells their story, 1 to 2 min]</div>
-</div>
-
-<div style="display: flex; flex-wrap: wrap; gap: 16px">
-<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Social content</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] views</div><span>on one reel for [Client], [industry]</span></div>
-<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Paid ads</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] leads</div><span>in the first month for [Client], [industry]</span></div>
-<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Website and SEO</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#]% more calls</div><span>from Google for [Client], [industry]</span></div>
-<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Virtual assistants</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] hrs a week</div><span>back for the owner of [Client]</span></div>
+<blockquote style="flex: 1 1 380px; min-width: 0; margin: 0; background: #1B3F63; border-left: 4px solid #8CCE06; border-radius: 16px; padding: clamp(20px, 3vw, 32px); font-size: 17px; line-height: 1.6; color: #FFFFFF">“In our first two months working with Prospect Contractor Marketing, we spent $2,375 on Meta ads and closed $38,500 in new projects from leads that came through those ads and organic traffic to our website. That was on top of the business we normally do. We’re excited to see these results build month after month and see how much more we can grow from here.”<div style="margin-top: 14px; font-size: 15px; font-weight: 600; color: #8CCE06">Tom, Trim Views Carpentry</div></blockquote>
 </div>
 </section>
 
@@ -302,8 +314,7 @@ video{max-width:100%}
 </footer>
 
 </div>
-
-
+<script>(function(){var b=document.querySelector('.ba');if(!b)return;var bt=b.querySelectorAll('.ba-tabs button');bt.forEach(function(x){x.addEventListener('click',function(){var v=x.dataset.v;bt.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});b.classList.toggle('mobile',v==='mobile');b.querySelectorAll('.ba-frame img').forEach(function(im){im.src=im.dataset[v];im.parentNode.scrollTop=0})})})})();</script>
 
 </body>
 </html>
