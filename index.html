@@ -13,8 +13,10 @@ body{margin:0;background:#F6F6F2}
 a{color:#102F4D}a:hover{color:#24476B}
 video{max-width:100%}
 .hdr-cta{white-space:nowrap}
-@media (max-width:760px){.hdr{row-gap:12px!important}.hdr-cta{order:2}.hdr-nav{order:3;width:100%;font-size:14px!important;gap:6px 18px!important}}
-@media (max-width:560px){.stats{gap:10px!important}.stat-n{font-size:28px!important}.stat-l{font-size:13px!important;line-height:1.3}}
+@media (max-width:760px){.hdr{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px 12px!important;padding:14px 16px!important}.hdr>a:first-child img{height:34px!important;max-width:100%}.hdr-cta{grid-column:2;grid-row:1;padding:10px 16px!important;font-size:14px!important;min-height:40px!important}.hdr-nav{grid-column:1/-1;grid-row:2;font-size:14px!important;gap:6px 18px!important}}
+@media (max-width:560px){.stats{gap:8px!important}.stat-n{font-size:24px!important}.stat-l{font-size:12.5px!important;line-height:1.3}}
+.stat-l{white-space:nowrap}
+@media (max-width:560px){.svc-h{font-size:28px!important}}
 </style>
 </head>
 <body>
@@ -37,15 +39,11 @@ video{max-width:100%}
 </header>
 
 <!-- HERO -->
-<section id="top" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 88px) 24px 0">
-<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
-<h1 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 100%; font-weight: 600; font-size: clamp(38px, 5vw, 66px); line-height: 1.05; letter-spacing: -0.035em; max-width: 14em">Business owners first. Marketers second.</h1>
-<p style="margin: 0; font-size: 20px; color: #4E5868; max-width: 34em">Our founder ran a landscaping company for 8 years and went through 12 marketing agencies. We know what every marketing dollar means to a business owner, so we measure our work in return on investment, not impressions.</p>
-</div>
-<div class="stats" style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6">
-<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">151</div><div class="stat-l" style="color: #4E5868; font-size: 15px">businesses served</div></div>
-<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">42</div><div class="stat-l" style="color: #4E5868; font-size: 15px">five-star reviews</div></div>
-<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">12 yrs</div><div class="stat-l" style="color: #4E5868; font-size: 15px">as business owners ourselves</div></div>
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 8px 24px 0">
+<div class="stats" style="margin-top: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-bottom: 1px solid #DEE1E6">
+<div style="padding: 10px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 30px; line-height: 1.1">151</div><div class="stat-l" style="color: #4E5868; font-size: 15px">businesses served</div></div>
+<div style="padding: 10px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 30px; line-height: 1.1">42</div><div class="stat-l" style="color: #4E5868; font-size: 15px">five-star reviews</div></div>
+<div style="padding: 10px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 30px; line-height: 1.1">12 yrs</div><div class="stat-l" style="color: #4E5868; font-size: 15px">in business</div></div>
 </div>
 </section>
 
@@ -53,6 +51,7 @@ video{max-width:100%}
 <section id="services" style="background: #FFFFFF; padding: 8px 24px clamp(56px, 7vw, 96px)">
 <div style="max-width: 1200px; margin: 0 auto">
 
+<div style="margin-top: 40px; background: #102F4D; border-radius: 20px; border-left: 6px solid #8CCE06; padding: clamp(24px, 4vw, 40px) clamp(20px, 4vw, 44px)"><h2 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 100%; font-weight: 600; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF">This page is built to help you understand our services.</h2></div>
 <!-- Service 1 -->
 <div style="display: flex; flex-direction: column; gap: 24px; padding: 40px 0 48px">
 <h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Social media content</h3>
@@ -89,12 +88,6 @@ video{max-width:100%}
 <div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,250<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month plus ad spend</span></div>
 </div>
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<div style="background: #EAF0F5; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: 64px; line-height: 1">7x</div><div style="font-size: 17px; font-weight: 600; color: #102F4D">average return on ad spend across our clients</div></div>
-<p style="margin: 0; color: #33415A">For example, [CLIENT NAME] spent [$X] on ads and booked [$Y] in new jobs.</p>
-<p style="margin: 0; font-size: 15px; color: #33415A">And that number leaves a lot out: the repeat business those customers bring, their word of mouth, and the neighbors who hire the same company after seeing them at work in the community.</p>
-</div>
-<div style="aspect-ratio: 16 / 9; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Photo or screenshot: our client ROI scoreboard]</div>
 <p style="margin: 0; font-size: 16px; color: #33415A">We’re competitive about our clients’ results. Our team keeps an ESPN-style scoreboard that tracks the return on investment for every business we work with. We check it daily and compete to push those numbers up, and it shows us where a business may be leaking leads or revenue so we can help fix it.</p>
 </div>
 </div>
@@ -102,7 +95,7 @@ video{max-width:100%}
 <!-- Service 3 -->
 <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0; border-top: 1px solid #DEE1E6">
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Websites and organic marketing</h3>
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1" class="svc-h">Websites and <span style="white-space: nowrap">organic marketing</span></h3>
 <p style="margin: 0; color: #4E5868; max-width: 34em">We build and maintain your website and handle the ongoing work that brings in free traffic: search rankings, Google Business Profile, reviews and email.</p>
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
 <li>Website design, build, hosting and updates</li>
@@ -155,6 +148,15 @@ video{max-width:100%}
 <p style="margin: 0 0 16px; color: #4E5868; font-size: 19px; max-width: 40em">Most clients start with one and add others as they grow. Every service is measured by what it returns to your business, and we connect your marketing to your sales so more leads turn into paying customers.</p>
 <p style="margin: 0 0 0; font-size: 18px; color: #4E5868; max-width: 36em">We build your marketing around your business strategy, and we run sales and marketing as one team, because leads only matter if they turn into revenue.</p>
 </div>
+</div>
+</section>
+
+
+<!-- OWNERS FIRST -->
+<section style="background: #102F4D; border-top: 4px solid #8CCE06; padding: clamp(56px, 8vw, 104px) 24px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<h1 style="margin: 0; color: #FFFFFF; font-family: 'Archivo', Arial, sans-serif; font-stretch: 100%; font-weight: 600; font-size: clamp(22px, 6.6vw, 66px); line-height: 1.08; letter-spacing: -0.035em"><span style="white-space: nowrap">Business owners first.</span><br><span style="white-space: nowrap">Marketers second.</span></h1>
+<p style="margin: 0; font-size: 20px; color: #C9D6E3; max-width: 34em">Our founder ran a landscaping company for 8 years and went through 12 marketing agencies. We know what every marketing dollar means to a business owner, so we measure our work in return on investment, not impressions.</p>
 </div>
 </section>
 
@@ -216,19 +218,6 @@ video{max-width:100%}
 </div>
 </div>
 <video controls playsinline preload="none" poster="img/scale-to-sell.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;background:#1B3F63;border-radius:24px;display:block"><source src="v/scale-to-sell.mp4" type="video/mp4"></video>
-<div style="display: flex; flex-wrap: wrap; gap: 0; margin-top: 32px; border-top: 1px solid #24476B">
-<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">3</div><div style="color: #C9D6E3; font-size: 15px">events hosted</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">business owners attended</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">guest speakers</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">community members</div></div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px">
-<div style="grid-column: span 2; grid-row: span 2; min-height: 320px; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 15px; text-align: center; padding: 16px">[Photo: full room from the stage]</div>
-<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: speaker]</div>
-<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: networking]</div>
-<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: panel]</div>
-<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: check-in, signage]</div>
-</div>
 <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px">
 <blockquote style="flex: 1 1 320px; margin: 0; background: #0A1E33; border-radius: 16px; padding: 24px; font-size: 18px">“[Attendee quote about what they took away.]”<div style="margin-top: 12px; font-size: 15px; color: #C9D6E3">[Name], [Business]</div></blockquote>
 <blockquote style="flex: 1 1 320px; margin: 0; background: #0A1E33; border-radius: 16px; padding: 24px; font-size: 18px">“[Attendee quote about the community.]”<div style="margin-top: 12px; font-size: 15px; color: #C9D6E3">[Name], [Business]</div></blockquote>
@@ -283,7 +272,7 @@ video{max-width:100%}
 <details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Are there long-term contracts?</summary><p style="margin: 12px 0 0; color: #4E5868">We went through 12 marketing companies in 8 years, so we don’t want to hold anyone who isn’t happy. We don’t do contracts. We use written agreements: 12 months, with the option to cancel after the first 3 months if you’re unhappy. And really, if you ever want to end the agreement, you can. We just believe in putting it in writing.</p>
 </details>
 <details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Can I start with one service and add more later?</summary><p style="margin: 12px 0 0; color: #4E5868">Yes. Most clients start with one and add others once they see results.</p></details>
-<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">How soon will I see results?</summary><p style="margin: 12px 0 0; color: #4E5868">The details depend on which services you choose, your budget, and how fast you want to go to market. Whatever you pick, serious compounding results take 12 months or more, and months 24, 36 and 48 are when the snowball effect kicks in and the business becomes hard to stop. The agencies we hired promised a transformed business in 3, 6 or 9 months. That isn’t true, and we won’t tell you it is.</p></details>
+<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">How soon will I see results?</summary><p style="margin: 12px 0 0; color: #4E5868">The results depend on which services you choose, your budget, and how fast you want to go to market. Whatever you pick, serious compounding results take 12 months or more, and months 24, 36 and 48 are when the snowball effect kicks in and the business becomes hard to stop. The agencies we hired promised a transformed business in 3, 6 or 9 months. That isn’t true, and we won’t tell you it is.</p></details>
 <details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Who owns the content, accounts and website?</summary><p style="margin: 12px 0 0; color: #4E5868">[Your answer. Clients and referral partners both care about this one.]</p></details>
 <details style="border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Do you only work with service businesses?</summary><p style="margin: 12px 0 0; color: #4E5868">Yes. We only work with service businesses: companies that earn their revenue by doing work for customers, like landscaping, roofing, pressure cleaning, electrical, plumbing, HVAC, cleaning, and medical or professional practices. We don’t work with e-commerce or product-based businesses.</p></details>
 </div>
@@ -293,11 +282,11 @@ video{max-width:100%}
 <section id="book" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) 24px">
 <div style="background: #8CCE06; border-radius: 28px; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
 <div style="flex: 1 1 480px; min-width: 0">
-<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Let’s talk about your business.</h2>
-<p style="margin: 0; font-size: 19px; color: #102F4D">A free 20-minute call. You’ll leave with ideas whether or not we work together.</p>
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Let’s talk business.</h2>
+<p style="margin: 0; font-size: 19px; color: #102F4D">If you want to be a referral partner or book a strategy call, book now.</p>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="https://api.leadconnectorhq.com/widget/booking/jPR9CzM0Kc2xJCswyDVN" target="_blank" rel="noopener" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 18px 32px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book a free strategy call</a>
+<a href="https://api.leadconnectorhq.com/widget/booking/jPR9CzM0Kc2xJCswyDVN" target="_blank" rel="noopener" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 18px 32px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book a 20 Minute Call</a>
 </div>
 </div>
 </section>
