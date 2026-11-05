@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prospect Marketing</title>
+<meta name="description" content="Prospect Marketing: social media content, paid ads, websites and virtual assistants for service businesses in Southwest Florida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>:root{color-scheme:light}
+body{margin:0;background:#F6F6F2}
+a{color:#102F4D}a:hover{color:#24476B}
+video{max-width:100%}
+.vsl{position:relative;aspect-ratio:16/9;background:#0A1E33;border-radius:20px;overflow:hidden;max-width:100%}
+.vsl video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0A1E33}
+.vsl-big{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;border:0;background:#8CCE06;color:#102F4D;display:grid;place-items:center;cursor:pointer;box-shadow:0 0 0 10px rgba(140,206,6,.25);z-index:2;transition:transform .2s}
+.vsl-big:hover{transform:translate(-50%,-50%) scale(1.06)}
+.vsl.playing .vsl-big{display:none}
+.vsl-bar{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(transparent,rgba(5,9,14,.75));color:#fff;opacity:0;transition:opacity .25s}
+.vsl.started .vsl-bar{opacity:1}
+.vsl.playing:not(:hover):not(:focus-within) .vsl-bar{opacity:0}
+.vsl-bar button{width:36px;height:36px;border:0;background:none;color:#fff;cursor:pointer;display:grid;place-items:center;padding:0;flex:none}
+.vsl-bar svg{width:20px;height:20px}
+.vsl .i-pause{display:none}.vsl.playing .i-pause{display:block}.vsl.playing .i-play{display:none}
+.vsl.muted .w{display:none}
+.vsl-time{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.vsl-track{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.3);cursor:pointer;position:relative;min-width:40px}
+.vsl-track i{position:absolute;left:0;top:0;bottom:0;width:0;background:#8CCE06;border-radius:3px}
+.vsl-track:focus-visible,.vsl-bar button:focus-visible,.vsl-big:focus-visible{outline:2px solid #8CCE06;outline-offset:2px}
+.vsl:fullscreen{border-radius:0}
+@media (max-width:480px){.vsl-time{display:none}}
+</style>
+</head>
+<body>
+
+<div style="font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif; color: #102F4D; background: #F6F6F2; line-height: 1.55; font-size: 17px">
+
+<!-- NAV -->
+<header style="background: #F6F6F2; border-bottom: 1px solid #DEE1E6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" aria-label="Prospect Marketing home" style="display:inline-flex"><img src="img/logo-navy.png" alt="Prospect Marketing" width="600" height="134" style="height:44px;width:auto;display:block"></a>
+<nav aria-label="Page sections" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; font-weight: 500">
+<a href="#services" style="text-decoration: none">Services</a>
+<a href="#results" style="text-decoration: none">Client results</a>
+<a href="#testimonials" style="text-decoration: none">Testimonials</a>
+<a href="#scale" style="text-decoration: none">Scale to Sell</a>
+<a href="#refer" style="text-decoration: none">Refer a business</a>
+</nav>
+<a href="#book" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book a call</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) 24px clamp(40px, 5vw, 64px)">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<h1 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.0; letter-spacing: -0.025em">Business owners first. Marketers second.</h1>
+<p style="margin: 0; font-size: 20px; color: #4E5868; max-width: 34em">Our founder ran a landscaping company for 8 years and went through 12 marketing agencies. We know what every marketing dollar means to a business owner, so we measure our work in return on investment, not impressions.</p>
+<p style="margin: 0; font-size: 18px; color: #4E5868; max-width: 36em">We build your marketing around your business strategy, and we run sales and marketing as one team, because leads only matter if they turn into revenue.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#book" style="background: #8CCE06; color: #102F4D; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book a free strategy call</a>
+<a href="#refer" style="background: #FFFFFF; color: #102F4D; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; border: 1.5px solid #102F4D; min-height: 44px; box-sizing: border-box">Refer a business to us</a>
+</div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0">
+<div class="vsl" id="vsl">
+<video id="vslA" playsinline preload="metadata" poster="img/hero.jpg"></video>
+<video id="vslB" playsinline preload="none" hidden></video>
+<button type="button" class="vsl-big" id="vslBig" aria-label="Play the video"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
+<div class="vsl-bar">
+<button type="button" id="vslPlay" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+<span class="vsl-time" id="vslTime">0:00 / 9:59</span>
+<div class="vsl-track" id="vslTrack" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="599" aria-valuenow="0"><i id="vslFill"></i></div>
+<button type="button" id="vslMute" aria-label="Mute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4z"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></button>
+<button type="button" id="vslFull" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6">
+<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">151</div><div style="color: #4E5868; font-size: 15px">businesses served</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">3</div><div style="color: #4E5868; font-size: 15px">Scale to Sell events hosted</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">42</div><div style="color: #4E5868; font-size: 15px">five-star reviews</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">12 yrs</div><div style="color: #4E5868; font-size: 15px">as business owners ourselves</div></div>
+</div>
+</section>
+
+<!-- SERVICES OVERVIEW -->
+<section id="services" style="background: #FFFFFF; padding: clamp(56px, 7vw, 96px) 24px">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Four services. One team.</h2>
+<p style="margin: 0 0 48px; color: #4E5868; font-size: 19px; max-width: 40em">Most clients start with one and add others as they grow. Every service is measured by what it returns to your business, and we connect your marketing to your sales so more leads turn into paying customers.</p>
+
+<!-- Service 1 -->
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0; border-top: 1px solid #DEE1E6">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Social media content</h3>
+<p style="margin: 0; color: #4E5868; max-width: 34em">We script, film, edit and post short-form video for your business, and manage your accounts so you show up consistently without doing it yourself.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>6 short reels a month, scripted and filmed on location</li>
+<li>Editing with captions, music and branding</li>
+<li>Posting to Instagram, TikTok and Facebook</li>
+<li>Monthly report on views, followers and leads</li>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #4E5868"><strong style="color: #102F4D">Good fit:</strong> home services, contractors, clinics and other service businesses.</p>
+<div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,250<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/birdies.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/birdies.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Birdie’s Pressure Cleaning</figcaption></figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/mckinnis.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/mckinnis.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">McKinnis Roofing and Sheet Metal</figcaption></figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/distinctive.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/distinctive.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Distinctive Shower and Glass Door</figcaption></figure>
+</div>
+</div>
+
+<!-- Service 2 -->
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0; border-top: 1px solid #DEE1E6">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Paid advertising</h3>
+<p style="margin: 0; color: #4E5868; max-width: 34em">We plan, build and manage ad campaigns on Google, Facebook, Instagram and other platforms, and track every dollar back to the revenue it brings in.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>Google Search, Google Maps and Meta campaigns</li>
+<li>Ad creative and copy, including video from our team</li>
+<li>Lead tracking and follow-up setup</li>
+<li>Monthly report on spend, leads and cost per lead</li>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #4E5868"><strong style="color: #102F4D">Good fit:</strong> businesses ready to spend [$X]+ a month on ads to get leads now.</p>
+<div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,250<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month plus ad spend</span></div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="background: #EAF0F5; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: 64px; line-height: 1">7x</div><div style="font-size: 17px; font-weight: 600; color: #102F4D">average return on ad spend across our clients</div></div>
+<p style="margin: 0; color: #33415A">For example, [CLIENT NAME] spent [$X] on ads and booked [$Y] in new jobs.</p>
+<p style="margin: 0; font-size: 15px; color: #33415A">And that number leaves a lot out: the repeat business those customers bring, their word of mouth, and the neighbors who hire the same company after seeing them at work in the community.</p>
+</div>
+<div style="aspect-ratio: 16 / 9; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Photo or screenshot: our client ROI scoreboard]</div>
+<p style="margin: 0; font-size: 16px; color: #33415A">We’re competitive about our clients’ results. Our team keeps an ESPN-style scoreboard that tracks the return on investment for every business we work with. We check it daily and compete to push those numbers up, and it shows us where a business may be leaking leads or revenue so we can help fix it.</p>
+</div>
+</div>
+
+<!-- Service 3 -->
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0; border-top: 1px solid #DEE1E6">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Websites and organic marketing</h3>
+<p style="margin: 0; color: #4E5868; max-width: 34em">We build and maintain your website and handle the ongoing work that brings in free traffic: search rankings, Google Business Profile, reviews and email.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>Website design, build, hosting and updates</li>
+<li>Local SEO and Google Business Profile management</li>
+<li>Review generation and email marketing</li>
+<li>Monthly report on traffic, rankings and calls</li>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #4E5868"><strong style="color: #102F4D">Good fit:</strong> businesses with an outdated site or that don’t show up when customers search.</p>
+<div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">From $297<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
+<p style="margin: 0; align-self: flex-start; background: #8CCE06; color: #102F4D; border-radius: 12px; padding: 12px 18px; font-size: 16px"><strong>No upfront fees</strong>, even when we build you a brand-new website.</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="aspect-ratio: 4 / 3; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Before: Elite Electricals’ old website]</div>
+<div style="aspect-ratio: 4 / 3; background: #FFFFFF; border: 1.5px dashed #B8C0CC; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #4E5868; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[After: the Elite Electricals site we built]</div>
+<div style="grid-column: span 2; background: #EAF0F5; border-radius: 16px; padding: 20px 24px; font-size: 16px; color: #33415A"><strong style="color: #102F4D">[Client name]:</strong> from page [#] to the top 3 on Google Maps for “[search term]” in [#] months.</div>
+</div>
+</div>
+
+<!-- Service 4 -->
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0 0; border-top: 1px solid #DEE1E6">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Virtual assistants</h3>
+<p style="margin: 0; color: #4E5868; max-width: 34em">We place trained remote assistants inside your business to take admin, scheduling, follow-up and customer service off your plate.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>Assistants matched to your tasks and tools</li>
+<li>Training and onboarding handled by us</li>
+<li>Part-time or full-time, remote</li>
+<li>We manage quality and replacements</li>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #4E5868"><strong style="color: #102F4D">Good fit:</strong> owners spending hours a week on tasks someone else could do.</p>
+<div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,495<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="background: #EAF0F5; border-radius: 16px; padding: 28px">
+<p style="margin: 0 0 14px; font-weight: 600">What clients hand off</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Inbox and calendar</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Lead follow-up</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Customer service</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Data entry</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Scheduling</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 15px">Invoicing</span>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DEE1E6; border-radius: 16px; padding: 24px; font-size: 16px">“[Quote from a VA client about hours saved.]”<div style="margin-top: 10px; font-size: 15px; color: #4E5868">[Name], [Business]</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CLIENT RESULTS -->
+<section id="results" style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px">
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Client results</h2>
+<p style="margin: 0 0 40px; color: #4E5868; font-size: 19px; max-width: 40em">Real numbers from real accounts, shared with our clients’ permission.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px; background: #102F4D; color: #FFFFFF; border-radius: 24px; padding: clamp(28px, 4vw, 48px); margin-bottom: 16px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 15px; color: #C9D6E3">Featured case study, [Service]</span>
+<h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1">[Client name] went from [starting point] to [result] in [#] months.</h3>
+<p style="margin: 0; color: #C9D6E3">[Two sentences: the problem they came in with, and what we did about it.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 8px">
+<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1; color: #8CCE06">[#]</div><div style="font-size: 15px; color: #C9D6E3">[metric]</div></div>
+<div><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1; color: #8CCE06">[#]</div><div style="font-size: 15px; color: #C9D6E3">[metric]</div></div>
+</div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; aspect-ratio: 16 / 10; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 15px; text-align: center; padding: 16px; box-sizing: border-box">[Video: client tells their story, 1 to 2 min]</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Social content</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] views</div><span>on one reel for [Client], [industry]</span></div>
+<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Paid ads</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] leads</div><span>in the first month for [Client], [industry]</span></div>
+<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Website and SEO</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#]% more calls</div><span>from Google for [Client], [industry]</span></div>
+<div style="flex: 1 1 260px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; color: #4E5868">Virtual assistants</span><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">[#] hrs a week</div><span>back for the owner of [Client]</span></div>
+</div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section id="testimonials" style="background: #FFFFFF; padding: clamp(56px, 7vw, 96px) 24px">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Hear it from them</h2>
+<p style="margin: 0 0 40px; color: #4E5868; font-size: 19px; max-width: 40em">Unscripted videos from business owners we work with.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:20px"><div style="display:flex;flex-direction:column;gap:10px;min-width:0"><video controls playsinline preload="none" poster="img/aj-yacht.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;background:#102F4D;border-radius:16px;display:block"><source src="v/aj-yacht.mp4" type="video/mp4"></video><div style="font-weight:600">AJ, AJ’s Yacht Services</div><div style="font-size:15px;color:#4E5868">[Service they use]</div></div><div style="display:flex;flex-direction:column;gap:10px;min-width:0"><video controls playsinline preload="none" poster="img/f3-land.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;background:#102F4D;border-radius:16px;display:block"><source src="v/f3-land.mp4" type="video/mp4"></video><div style="font-weight:600">Cody, F3 Land Services</div><div style="font-size:15px;color:#4E5868">[Service they use]</div></div><div style="display:flex;flex-direction:column;gap:10px;min-width:0"><div style="aspect-ratio:16/9;background:#102F4D;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#C9D6E3;font-size:15px">[Testimonial video]</div><div style="font-weight:600">[Name], [Business]</div><div style="font-size:15px;color:#4E5868">[Service they use]</div></div><div style="display:flex;flex-direction:column;gap:10px;min-width:0"><div style="aspect-ratio:16/9;background:#102F4D;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#C9D6E3;font-size:15px">[Testimonial video]</div><div style="font-weight:600">[Name], [Business]</div><div style="font-size:15px;color:#4E5868">[Service they use]</div></div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px">
+<blockquote style="flex: 1 1 320px; margin: 0; background: #F6F6F2; border-radius: 16px; padding: 24px; font-size: 17px">“[Short written review pulled from Google.]”<div style="margin-top: 12px; font-size: 15px; color: #4E5868">[Name], Google review</div></blockquote>
+<blockquote style="flex: 1 1 320px; margin: 0; background: #F6F6F2; border-radius: 16px; padding: 24px; font-size: 17px">“[Short written review pulled from Google.]”<div style="margin-top: 12px; font-size: 15px; color: #4E5868">[Name], Google review</div></blockquote>
+<blockquote style="flex: 1 1 320px; margin: 0; background: #F6F6F2; border-radius: 16px; padding: 24px; font-size: 17px">“[Short written review pulled from Google.]”<div style="margin-top: 12px; font-size: 15px; color: #4E5868">[Name], Google review</div></blockquote>
+</div>
+</div>
+</section>
+
+<!-- SCALE TO SELL -->
+<section id="scale" style="background: #102F4D; color: #FFFFFF; padding: clamp(64px, 8vw, 112px) 24px">
+<div style="max-width: 1200px; margin: 0 auto">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; margin-bottom: 40px">
+<div style="flex: 1 1 520px; min-width: 0">
+<p style="margin: 0 0 12px; font-size: 16px; color: #8CCE06; font-weight: 600">Our business education community</p>
+<h2 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 125%; font-weight: 800; font-size: clamp(48px, 7vw, 104px); line-height: 0.95; letter-spacing: -0.03em">Scale to Sell</h2>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 19px; color: #C9D6E3">An online business community with group coaching calls twice a week and custom-built courses on the exact systems we used to scale our landscaping business to $2.4 million in annual revenue. We also host live, in-person events where business owners learn from operators who’ve grown and sold companies.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="background: #1B3F63; border-radius: 999px; padding: 8px 14px; font-size: 15px">Coaching twice a week</span>
+<span style="background: #1B3F63; border-radius: 999px; padding: 8px 14px; font-size: 15px">Custom-built courses</span>
+<span style="background: #1B3F63; border-radius: 999px; padding: 8px 14px; font-size: 15px">Live events</span>
+</div>
+</div>
+</div>
+<video controls playsinline preload="none" poster="img/scale-to-sell.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;background:#1B3F63;border-radius:24px;display:block"><source src="v/scale-to-sell.mp4" type="video/mp4"></video>
+<div style="display: flex; flex-wrap: wrap; gap: 0; margin-top: 32px; border-top: 1px solid #24476B">
+<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">3</div><div style="color: #C9D6E3; font-size: 15px">events hosted</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">business owners attended</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">guest speakers</div></div>
+<div style="flex: 1 1 200px; padding: 24px 20px 0 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 44px; line-height: 1.1">[#]</div><div style="color: #C9D6E3; font-size: 15px">community members</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px">
+<div style="grid-column: span 2; grid-row: span 2; min-height: 320px; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 15px; text-align: center; padding: 16px">[Photo: full room from the stage]</div>
+<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: speaker]</div>
+<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: networking]</div>
+<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: panel]</div>
+<div style="aspect-ratio: 1; background: #1B3F63; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #C9D6E3; font-size: 14px; text-align: center; padding: 12px">[Photo: check-in, signage]</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px">
+<blockquote style="flex: 1 1 320px; margin: 0; background: #0A1E33; border-radius: 16px; padding: 24px; font-size: 18px">“[Attendee quote about what they took away.]”<div style="margin-top: 12px; font-size: 15px; color: #C9D6E3">[Name], [Business]</div></blockquote>
+<blockquote style="flex: 1 1 320px; margin: 0; background: #0A1E33; border-radius: 16px; padding: 24px; font-size: 18px">“[Attendee quote about the community.]”<div style="margin-top: 12px; font-size: 15px; color: #C9D6E3">[Name], [Business]</div></blockquote>
+<blockquote style="flex: 1 1 320px; margin: 0; background: #0A1E33; border-radius: 16px; padding: 24px; font-size: 18px">“[Attendee quote about results after the event.]”<div style="margin-top: 12px; font-size: 15px; color: #C9D6E3">[Name], [Business]</div></blockquote>
+</div>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; background: #FFFFFF; color: #102F4D; border-radius: 20px; padding: 28px 32px">
+<div style="flex: 1 1 420px; min-width: 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 36px; line-height: 1.1">$2,500<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / year</span></div><div style="color: #4E5868; font-size: 16px; margin-top: 6px">Includes group coaching calls twice a week and all the online curriculum we used to scale our business.</div></div>
+<a href="[JOIN LINK]" style="background: #8CCE06; color: #102F4D; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Join Scale to Sell</a>
+</div>
+</div>
+</section>
+
+<!-- REFERRAL PARTNERS -->
+<section id="refer" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 400px; min-width: 0">
+<h2 style="margin: 0 0 16px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">For referral partners</h2>
+<p style="margin: 0 0 28px; color: #4E5868; font-size: 19px">Accountants, attorneys, bankers, advisors, networking groups: if you work with business owners, this is for you. When you send us a client, your name is on it. Here’s how we take care of them, and you.</p>
+<div style="background: #102F4D; color: #FFFFFF; border-radius: 16px; padding: 28px; margin-bottom: 16px">
+<div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.05; color: #8CCE06">10% for 12 months</div>
+<p style="margin: 10px 0 0; color: #C9D6E3">When a business you refer becomes a monthly client, we pay you 10% of their monthly bill, every month, for the first 12 months of the relationship.</p>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 28px">
+<p style="margin: 0 0 12px; font-weight: 600">A good referral is a business that</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #33415A">
+<li>has been open at least [#] year and wants to grow</li>
+<li>is posting inconsistently or not at all</li>
+<li>has an outdated website or no Google presence</li>
+<li>has an owner buried in admin work</li>
+</ul>
+</div>
+</div>
+<div style="flex: 1 1 520px; min-width: 0">
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0">
+<li style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #DEE1E6"><span style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 28px; width: 40px; flex-shrink: 0">1</span><div><div style="font-weight: 600; font-size: 19px">You make the intro</div><div style="color: #4E5868">Send a group text or email introducing them to Bailey Peer at <a href="mailto:b@prospecthelp.com">b@prospecthelp.com</a> or <a href="tel:+12399103802">239-910-3802</a>. Or just send them this page.</div></div></li>
+<li style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #DEE1E6"><span style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 28px; width: 40px; flex-shrink: 0">2</span><div><div style="font-weight: 600; font-size: 19px">We reach out within 24 hours</div><div style="color: #4E5868">A free strategy call to understand their business. No pressure, no hard sell.</div></div></li>
+<li style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #DEE1E6"><span style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 28px; width: 40px; flex-shrink: 0">3</span><div><div style="font-weight: 600; font-size: 19px">We tell them honestly if we’re a fit</div><div style="color: #4E5868">If we aren’t the right answer, we say so and point them somewhere better.</div></div></li>
+<li style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6"><span style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 28px; width: 40px; flex-shrink: 0">4</span><div><div style="font-weight: 600; font-size: 19px">We keep you in the loop</div><div style="color: #4E5868">You’ll hear from us after the first call, and your 10% commission starts with their first monthly payment.</div></div></li>
+</ol>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
+<a href="[REFERRAL FORM LINK]" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Send us a referral</a>
+<a href="sms:+12399103802" style="background: #FFFFFF; color: #102F4D; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; border: 1.5px solid #102F4D; min-height: 44px; box-sizing: border-box">Text Bailey</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section style="background: #FFFFFF; padding: clamp(56px, 7vw, 96px) 24px">
+<div style="max-width: 820px; margin: 0 auto">
+<h2 style="margin: 0 0 32px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.02em">Common questions</h2>
+<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Are there long-term contracts?</summary><p style="margin: 12px 0 0; color: #4E5868">We went through 12 marketing companies in 8 years, so we don’t want to hold anyone who isn’t happy. We don’t do contracts. We use written agreements: 12 months, with the option to cancel after the first 3 months if you’re unhappy. And really, if you ever want to end the agreement, you can. We just believe in putting it in writing.</p>
+<p style="margin: 12px 0 0; color: #4E5868">The details depend on which services you choose, your budget, and how fast you want to go to market. Whatever you pick, serious compounding results take 12 months or more, and months 24, 36 and 48 are when the snowball effect kicks in and the business becomes hard to stop. The agencies we hired promised a transformed business in 3, 6 or 9 months. That isn’t true, and we won’t tell you it is.</p></details>
+<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Can I start with one service and add more later?</summary><p style="margin: 12px 0 0; color: #4E5868">Yes. Most clients start with one and add others once they see results.</p></details>
+<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">How soon will I see results?</summary><p style="margin: 12px 0 0; color: #4E5868">[Honest timelines per service: ads in weeks, SEO in months, and so on.]</p></details>
+<details style="border-top: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Who owns the content, accounts and website?</summary><p style="margin: 12px 0 0; color: #4E5868">[Your answer. Clients and referral partners both care about this one.]</p></details>
+<details style="border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6; padding: 20px 0"><summary style="font-weight: 600; font-size: 19px; cursor: pointer">Do you only work with service businesses?</summary><p style="margin: 12px 0 0; color: #4E5868">Yes. We only work with service businesses: companies that earn their revenue by doing work for customers, like landscaping, roofing, pressure cleaning, electrical, plumbing, HVAC, cleaning, and medical or professional practices. We don’t work with e-commerce or product-based businesses.</p></details>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="book" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) 24px">
+<div style="background: #8CCE06; border-radius: 28px; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 480px; min-width: 0">
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Let’s talk about your business.</h2>
+<p style="margin: 0; font-size: 19px; color: #102F4D">A free 20-minute call. You’ll leave with ideas whether or not we work together.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://api.leadconnectorhq.com/widget/booking/jPR9CzM0Kc2xJCswyDVN" target="_blank" rel="noopener" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 18px 32px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book a free strategy call</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid #DEE1E6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; font-size: 15px; color: #4E5868">
+<img src="img/logo-navy.png" alt="Prospect Marketing" width="600" height="134" style="height:34px;width:auto;display:block">
+<span>Fort Myers, Florida</span>
+<a href="tel:+12399103802" style="color: #4E5868">239-910-3802</a>
+<a href="mailto:b@prospecthelp.com" style="color: #4E5868">b@prospecthelp.com</a>
+</div>
+</footer>
+
+</div>
+
+<script>(function(){
+var SEGS=[["v/hero-0.mp4", 120.024], ["v/hero-1.mp4", 120.0], ["v/hero-2.mp4", 120.0], ["v/hero-3.mp4", 120.0], ["v/hero-4.mp4", 118.611]]; // [[url,duration],...]
+var box=document.getElementById('vsl'),A=document.getElementById('vslA'),B=document.getElementById('vslB');
+var big=document.getElementById('vslBig'),pb=document.getElementById('vslPlay'),mu=document.getElementById('vslMute'),fu=document.getElementById('vslFull');
+var tr=document.getElementById('vslTrack'),fill=document.getElementById('vslFill'),tm=document.getElementById('vslTime');
+var starts=[],T=0;SEGS.forEach(function(s){starts.push(T);T+=s[1]});
+var cur=A,nxt=B,idx=0;
+function fmt(s){s=Math.max(0,Math.floor(s));return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
+function load(v,i){v.src=SEGS[i][0];v.dataset.i=i;v.load()}
+load(A,0);
+function prepNext(){if(idx+1<SEGS.length&&nxt.dataset.i!=idx+1){nxt.preload='auto';load(nxt,idx+1)}}
+function ui(){var t=starts[idx]+(cur.currentTime||0);fill.style.width=(t/T*100)+'%';tm.textContent=fmt(t)+' / '+fmt(T);tr.setAttribute('aria-valuenow',Math.round(t));
+ box.classList.toggle('playing',!cur.paused);box.classList.toggle('muted',cur.muted);pb.setAttribute('aria-label',cur.paused?'Play':'Pause');mu.setAttribute('aria-label',cur.muted?'Unmute':'Mute')}
+function swap(i,time,play){var vol=cur.volume,m=cur.muted;cur.pause();
+ if(nxt.dataset.i!=i)load(nxt,i);
+ var a=cur;cur=nxt;nxt=a;idx=i;cur.volume=vol;cur.muted=m;cur.hidden=false;nxt.hidden=true;
+ var go=function(){try{cur.currentTime=time}catch(e){} if(play)cur.play().catch(function(){});ui();prepNext()};
+ if(cur.readyState>=1)go();else cur.addEventListener('loadedmetadata',go,{once:true})}
+function seekTo(t){t=Math.max(0,Math.min(T-0.5,t));var i=0;while(i+1<SEGS.length&&t>=starts[i+1])i++;var play=!cur.paused||box.classList.contains('started');
+ if(i===idx){cur.currentTime=t-starts[i];ui()}else swap(i,t-starts[i],!cur.paused)}
+function toggle(){box.classList.add('started');if(cur.paused){cur.play().catch(function(){});prepNext()}else cur.pause()}
+[A,B].forEach(function(v){
+ v.addEventListener('timeupdate',function(){if(v===cur)ui()});
+ v.addEventListener('play',function(){if(v===cur)ui()});v.addEventListener('pause',function(){if(v===cur)ui()});
+ v.addEventListener('ended',function(){if(v!==cur)return;if(idx+1<SEGS.length)swap(idx+1,0,true);else{ui();box.classList.remove('playing')}});
+ v.addEventListener('click',toggle)});
+big.addEventListener('click',toggle);pb.addEventListener('click',toggle);
+mu.addEventListener('click',function(){cur.muted=!cur.muted;nxt.muted=cur.muted;ui()});
+fu.addEventListener('click',function(){try{if(document.fullscreenElement)document.exitFullscreen();else if(box.requestFullscreen)box.requestFullscreen().catch(function(){});else if(cur.webkitEnterFullscreen)cur.webkitEnterFullscreen()}catch(e){}});
+function pos(e){var r=tr.getBoundingClientRect();return (e.clientX-r.left)/r.width*T}
+tr.addEventListener('click',function(e){box.classList.add('started');seekTo(pos(e))});
+tr.addEventListener('keydown',function(e){var t=starts[idx]+cur.currentTime;if(e.key==='ArrowRight'){seekTo(t+10);e.preventDefault()}if(e.key==='ArrowLeft'){seekTo(t-10);e.preventDefault()}});
+ui();
+})();
+</script>
+
+</body>
+</html>
