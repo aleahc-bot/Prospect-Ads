@@ -25,7 +25,7 @@ video{max-width:100%}
 .ba-tabs button:focus-visible{outline:2px solid #8CCE06;outline-offset:2px}
 .ba-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .ba-grid figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
-.ba-grid figcaption{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#102F4D}
+.ba-grid figcaption{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:600;color:#102F4D}
 .ba-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .ba-tag.old{background:#DEE1E6;color:#4E5868}.ba-tag.new{background:#8CCE06;color:#102F4D}
 .ba-frame{height:380px;overflow-y:auto;overflow-x:hidden;border:1px solid #DEE1E6;border-radius:14px;background:#fff;box-shadow:0 12px 28px -18px rgba(16,47,77,.45);overscroll-behavior:contain}
@@ -123,11 +123,11 @@ video{max-width:100%}
 <div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">From $297<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
 <p style="margin: 0; align-self: flex-start; background: #8CCE06; color: #102F4D; border-radius: 12px; padding: 12px 18px; font-size: 16px"><strong>No upfront fees</strong>, even when we build you a brand-new website.</p>
 </div>
-<div class="ba" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<div class="ba-top"><span class="ba-name">Elite Electrical Contractors</span><div class="ba-tabs" role="group" aria-label="Choose view"><button type="button" aria-pressed="true" data-v="desktop">Desktop</button><button type="button" aria-pressed="false" data-v="mobile">Mobile</button></div></div>
+<div class="ba mobile" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div class="ba-top"><span class="ba-name">Elite Electrical Contractors</span></div>
 <div class="ba-grid">
-<figure><figcaption><span class="ba-tag old">Before</span>Old website</figcaption><div class="ba-frame"><img data-desktop="img/elite-old-desktop.jpg" data-mobile="img/elite-old-mobile.jpg" src="img/elite-old-desktop.jpg" alt="Elite Electrical’s old website" loading="lazy"></div></figure>
-<figure><figcaption><span class="ba-tag new">After</span>Site we built</figcaption><div class="ba-frame"><img data-desktop="img/elite-new-desktop.jpg" data-mobile="img/elite-new-mobile.jpg" src="img/elite-new-desktop.jpg" alt="The new Elite Electrical website Prospect built" loading="lazy"></div></figure>
+<figure><figcaption><span class="ba-tag old">Before</span></figcaption><div class="ba-frame"><img src="img/elite-old-mobile.jpg" alt="Elite Electrical’s old website" loading="lazy"></div></figure>
+<figure><figcaption><span class="ba-tag new">After</span></figcaption><div class="ba-frame"><img src="img/elite-new-mobile.jpg" alt="The new Elite Electrical website Prospect built" loading="lazy"></div></figure>
 </div>
 <p class="ba-hint">Scroll inside each preview to see the full page.</p>
 <div style="background: #EAF0F5; border-radius: 16px; padding: 20px 24px; font-size: 16px; color: #33415A"><strong style="color: #102F4D">Elite Electrical Contractors:</strong> We replaced their outdated website with a modern, mobile-friendly site that shows upfront pricing and lets customers book an electrician online from any device.</div>
@@ -315,7 +315,7 @@ video{max-width:100%}
 </footer>
 
 </div>
-<script>(function(){var b=document.querySelector('.ba');if(!b)return;var bt=b.querySelectorAll('.ba-tabs button');bt.forEach(function(x){x.addEventListener('click',function(){var v=x.dataset.v;bt.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});b.classList.toggle('mobile',v==='mobile');b.querySelectorAll('.ba-frame img').forEach(function(im){im.src=im.dataset[v];im.parentNode.scrollTop=0})})})})();</script>
+
 
 </body>
 </html>
