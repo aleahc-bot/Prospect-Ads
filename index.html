@@ -12,24 +12,9 @@
 body{margin:0;background:#F6F6F2}
 a{color:#102F4D}a:hover{color:#24476B}
 video{max-width:100%}
-.vsl{position:relative;aspect-ratio:16/9;background:#0A1E33;border-radius:20px;overflow:hidden;max-width:100%}
-.vsl video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0A1E33}
-.vsl-big{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;border:0;background:#8CCE06;color:#102F4D;display:grid;place-items:center;cursor:pointer;box-shadow:0 0 0 10px rgba(140,206,6,.25);z-index:2;transition:transform .2s}
-.vsl-big:hover{transform:translate(-50%,-50%) scale(1.06)}
-.vsl.playing .vsl-big{display:none}
-.vsl-bar{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(transparent,rgba(5,9,14,.75));color:#fff;opacity:0;transition:opacity .25s}
-.vsl.started .vsl-bar{opacity:1}
-.vsl.playing:not(:hover):not(:focus-within) .vsl-bar{opacity:0}
-.vsl-bar button{width:36px;height:36px;border:0;background:none;color:#fff;cursor:pointer;display:grid;place-items:center;padding:0;flex:none}
-.vsl-bar svg{width:20px;height:20px}
-.vsl .i-pause{display:none}.vsl.playing .i-pause{display:block}.vsl.playing .i-play{display:none}
-.vsl.muted .w{display:none}
-.vsl-time{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.vsl-track{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.3);cursor:pointer;position:relative;min-width:40px}
-.vsl-track i{position:absolute;left:0;top:0;bottom:0;width:0;background:#8CCE06;border-radius:3px}
-.vsl-track:focus-visible,.vsl-bar button:focus-visible,.vsl-big:focus-visible{outline:2px solid #8CCE06;outline-offset:2px}
-.vsl:fullscreen{border-radius:0}
-@media (max-width:480px){.vsl-time{display:none}}
+.hdr-cta{white-space:nowrap}
+@media (max-width:760px){.hdr{row-gap:12px!important}.hdr-cta{order:2}.hdr-nav{order:3;width:100%;font-size:14px!important;gap:6px 18px!important}}
+@media (max-width:560px){.stats{gap:10px!important}.stat-n{font-size:28px!important}.stat-l{font-size:13px!important;line-height:1.3}}
 </style>
 </head>
 <body>
@@ -38,64 +23,45 @@ video{max-width:100%}
 
 <!-- NAV -->
 <header style="background: #F6F6F2; border-bottom: 1px solid #DEE1E6">
-<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div class="hdr" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" aria-label="Prospect Marketing home" style="display:inline-flex"><img src="img/logo-navy.png" alt="Prospect Marketing" width="600" height="134" style="height:44px;width:auto;display:block"></a>
-<nav aria-label="Page sections" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; font-weight: 500">
+<nav class="hdr-nav" aria-label="Page sections" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; font-weight: 500">
 <a href="#services" style="text-decoration: none">Services</a>
 <a href="#results" style="text-decoration: none">Client results</a>
 <a href="#testimonials" style="text-decoration: none">Testimonials</a>
 <a href="#scale" style="text-decoration: none">Scale to Sell</a>
 <a href="#refer" style="text-decoration: none">Refer a business</a>
 </nav>
-<a href="#book" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book a call</a>
+<a class="hdr-cta" href="#book" style="background: #102F4D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book a call</a>
 </div>
 </header>
 
 <!-- HERO -->
-<section id="top" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) 24px clamp(40px, 5vw, 64px)">
-<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<h1 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.0; letter-spacing: -0.025em">Business owners first. Marketers second.</h1>
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 88px) 24px 0">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<h1 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 100%; font-weight: 600; font-size: clamp(38px, 5vw, 66px); line-height: 1.05; letter-spacing: -0.035em; max-width: 14em">Business owners first. Marketers second.</h1>
 <p style="margin: 0; font-size: 20px; color: #4E5868; max-width: 34em">Our founder ran a landscaping company for 8 years and went through 12 marketing agencies. We know what every marketing dollar means to a business owner, so we measure our work in return on investment, not impressions.</p>
-<p style="margin: 0; font-size: 18px; color: #4E5868; max-width: 36em">We build your marketing around your business strategy, and we run sales and marketing as one team, because leads only matter if they turn into revenue.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#book" style="background: #8CCE06; color: #102F4D; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book a free strategy call</a>
-<a href="#refer" style="background: #FFFFFF; color: #102F4D; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 999px; border: 1.5px solid #102F4D; min-height: 44px; box-sizing: border-box">Refer a business to us</a>
 </div>
-</div>
-<div style="flex: 1 1 440px; min-width: 0">
-<div class="vsl" id="vsl">
-<video id="vslA" playsinline preload="metadata" poster="img/hero.jpg"></video>
-<video id="vslB" playsinline preload="none" hidden></video>
-<button type="button" class="vsl-big" id="vslBig" aria-label="Play the video"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
-<div class="vsl-bar">
-<button type="button" id="vslPlay" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<span class="vsl-time" id="vslTime">0:00 / 9:59</span>
-<div class="vsl-track" id="vslTrack" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="599" aria-valuenow="0"><i id="vslFill"></i></div>
-<button type="button" id="vslMute" aria-label="Mute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4z"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></button>
-<button type="button" id="vslFull" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
-</div>
-</div>
-</div>
-</div>
-<div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6">
-<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">151</div><div style="color: #4E5868; font-size: 15px">businesses served</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">3</div><div style="color: #4E5868; font-size: 15px">Scale to Sell events hosted</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">42</div><div style="color: #4E5868; font-size: 15px">five-star reviews</div></div>
-<div style="flex: 1 1 200px; padding: 24px 20px 24px 0"><div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 115%; font-weight: 800; font-size: 40px; line-height: 1.1">12 yrs</div><div style="color: #4E5868; font-size: 15px">as business owners ourselves</div></div>
+<div class="stats" style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #DEE1E6; border-bottom: 1px solid #DEE1E6">
+<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">151</div><div class="stat-l" style="color: #4E5868; font-size: 15px">businesses served</div></div>
+<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">42</div><div class="stat-l" style="color: #4E5868; font-size: 15px">five-star reviews</div></div>
+<div style="padding: 24px 0; min-width: 0"><div class="stat-n" style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 105%; font-weight: 700; font-size: 40px; line-height: 1.1">12 yrs</div><div class="stat-l" style="color: #4E5868; font-size: 15px">as business owners ourselves</div></div>
 </div>
 </section>
 
 <!-- SERVICES OVERVIEW -->
-<section id="services" style="background: #FFFFFF; padding: clamp(56px, 7vw, 96px) 24px">
+<section id="services" style="background: #FFFFFF; padding: 8px 24px clamp(56px, 7vw, 96px)">
 <div style="max-width: 1200px; margin: 0 auto">
-<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Four services. One team.</h2>
-<p style="margin: 0 0 48px; color: #4E5868; font-size: 19px; max-width: 40em">Most clients start with one and add others as they grow. Every service is measured by what it returns to your business, and we connect your marketing to your sales so more leads turn into paying customers.</p>
 
 <!-- Service 1 -->
-<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding: 48px 0; border-top: 1px solid #DEE1E6">
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 24px; padding: 40px 0 48px">
 <h3 style="margin: 0; font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 34px; line-height: 1.1">Social media content</h3>
+<div class="reels" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 760px">
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/birdies.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/birdies.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Birdie’s Pressure Cleaning</figcaption></figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/mckinnis.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/mckinnis.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">McKinnis Roofing and Sheet Metal</figcaption></figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/distinctive.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/distinctive.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Distinctive Shower and Glass Door</figcaption></figure>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; color: #4E5868; max-width: 34em">We script, film, edit and post short-form video for your business, and manage your accounts so you show up consistently without doing it yourself.</p>
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
 <li>6 short reels a month, scripted and filmed on location</li>
@@ -105,11 +71,6 @@ video{max-width:100%}
 </ul>
 <p style="margin: 0; font-size: 15px; color: #4E5868"><strong style="color: #102F4D">Good fit:</strong> home services, contractors, clinics and other service businesses.</p>
 <div style="font-family: 'Archivo', Arial, sans-serif; font-stretch: 112%; font-weight: 800; font-size: 28px">$1,250<span style="font-family: 'Public Sans', Arial, sans-serif; font-weight: 500; font-size: 16px; color: #4E5868"> / month</span></div>
-</div>
-<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/birdies.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/birdies.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Birdie’s Pressure Cleaning</figcaption></figure>
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/mckinnis.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/mckinnis.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">McKinnis Roofing and Sheet Metal</figcaption></figure>
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px;min-width:0"><video controls playsinline preload="none" poster="img/distinctive.jpg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#102F4D;border-radius:14px;display:block"><source src="v/distinctive.mp4" type="video/mp4"></video><figcaption style="font-size:13px;font-weight:600;line-height:1.3">Distinctive Shower and Glass Door</figcaption></figure>
 </div>
 </div>
 
@@ -188,6 +149,11 @@ video{max-width:100%}
 </div>
 <div style="background: #FFFFFF; border: 1px solid #DEE1E6; border-radius: 16px; padding: 24px; font-size: 16px">“[Quote from a VA client about hours saved.]”<div style="margin-top: 10px; font-size: 15px; color: #4E5868">[Name], [Business]</div></div>
 </div>
+</div>
+<div style="padding: 56px 0 0; margin-top: 48px; border-top: 1px solid #DEE1E6">
+<h2 style="margin: 0 0 12px; font-family: 'Archivo', Arial, sans-serif; font-stretch: 118%; font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Four services. One team.</h2>
+<p style="margin: 0 0 16px; color: #4E5868; font-size: 19px; max-width: 40em">Most clients start with one and add others as they grow. Every service is measured by what it returns to your business, and we connect your marketing to your sales so more leads turn into paying customers.</p>
+<p style="margin: 0 0 0; font-size: 18px; color: #4E5868; max-width: 36em">We build your marketing around your business strategy, and we run sales and marketing as one team, because leads only matter if they turn into revenue.</p>
 </div>
 </div>
 </section>
@@ -348,41 +314,7 @@ video{max-width:100%}
 
 </div>
 
-<script>(function(){
-var SEGS=[["v/hero-0.mp4", 120.024], ["v/hero-1.mp4", 120.0], ["v/hero-2.mp4", 120.0], ["v/hero-3.mp4", 120.0], ["v/hero-4.mp4", 118.611]]; // [[url,duration],...]
-var box=document.getElementById('vsl'),A=document.getElementById('vslA'),B=document.getElementById('vslB');
-var big=document.getElementById('vslBig'),pb=document.getElementById('vslPlay'),mu=document.getElementById('vslMute'),fu=document.getElementById('vslFull');
-var tr=document.getElementById('vslTrack'),fill=document.getElementById('vslFill'),tm=document.getElementById('vslTime');
-var starts=[],T=0;SEGS.forEach(function(s){starts.push(T);T+=s[1]});
-var cur=A,nxt=B,idx=0;
-function fmt(s){s=Math.max(0,Math.floor(s));return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
-function load(v,i){v.src=SEGS[i][0];v.dataset.i=i;v.load()}
-load(A,0);
-function prepNext(){if(idx+1<SEGS.length&&nxt.dataset.i!=idx+1){nxt.preload='auto';load(nxt,idx+1)}}
-function ui(){var t=starts[idx]+(cur.currentTime||0);fill.style.width=(t/T*100)+'%';tm.textContent=fmt(t)+' / '+fmt(T);tr.setAttribute('aria-valuenow',Math.round(t));
- box.classList.toggle('playing',!cur.paused);box.classList.toggle('muted',cur.muted);pb.setAttribute('aria-label',cur.paused?'Play':'Pause');mu.setAttribute('aria-label',cur.muted?'Unmute':'Mute')}
-function swap(i,time,play){var vol=cur.volume,m=cur.muted;cur.pause();
- if(nxt.dataset.i!=i)load(nxt,i);
- var a=cur;cur=nxt;nxt=a;idx=i;cur.volume=vol;cur.muted=m;cur.hidden=false;nxt.hidden=true;
- var go=function(){try{cur.currentTime=time}catch(e){} if(play)cur.play().catch(function(){});ui();prepNext()};
- if(cur.readyState>=1)go();else cur.addEventListener('loadedmetadata',go,{once:true})}
-function seekTo(t){t=Math.max(0,Math.min(T-0.5,t));var i=0;while(i+1<SEGS.length&&t>=starts[i+1])i++;var play=!cur.paused||box.classList.contains('started');
- if(i===idx){cur.currentTime=t-starts[i];ui()}else swap(i,t-starts[i],!cur.paused)}
-function toggle(){box.classList.add('started');if(cur.paused){cur.play().catch(function(){});prepNext()}else cur.pause()}
-[A,B].forEach(function(v){
- v.addEventListener('timeupdate',function(){if(v===cur)ui()});
- v.addEventListener('play',function(){if(v===cur)ui()});v.addEventListener('pause',function(){if(v===cur)ui()});
- v.addEventListener('ended',function(){if(v!==cur)return;if(idx+1<SEGS.length)swap(idx+1,0,true);else{ui();box.classList.remove('playing')}});
- v.addEventListener('click',toggle)});
-big.addEventListener('click',toggle);pb.addEventListener('click',toggle);
-mu.addEventListener('click',function(){cur.muted=!cur.muted;nxt.muted=cur.muted;ui()});
-fu.addEventListener('click',function(){try{if(document.fullscreenElement)document.exitFullscreen();else if(box.requestFullscreen)box.requestFullscreen().catch(function(){});else if(cur.webkitEnterFullscreen)cur.webkitEnterFullscreen()}catch(e){}});
-function pos(e){var r=tr.getBoundingClientRect();return (e.clientX-r.left)/r.width*T}
-tr.addEventListener('click',function(e){box.classList.add('started');seekTo(pos(e))});
-tr.addEventListener('keydown',function(e){var t=starts[idx]+cur.currentTime;if(e.key==='ArrowRight'){seekTo(t+10);e.preventDefault()}if(e.key==='ArrowLeft'){seekTo(t-10);e.preventDefault()}});
-ui();
-})();
-</script>
+
 
 </body>
 </html>
